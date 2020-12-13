@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 import { nullCheckObjectValues } from '../../lib/util';
 
 const SubmitBlock = styled.section`
@@ -94,7 +95,18 @@ const Submit: React.FC = () => {
       window.alert('모든 정보를 입력해주세요.');
       return;
     }
-    window.alert(JSON.stringify({ ...form }));
+    const mailContent = `업체명: ${form.name}\n주소: ${form.address}\n이메일: ${form.email}\n전화번호: ${form.phone}\n상세업종: ${form.tag}`;
+    emailjs
+      .send(
+        `${process.env.REACT_APP_EMAIL_JS_SERVICE_ID}`,
+        `${process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID}`,
+        { message: mailContent },
+        `${process.env.REACT_APP_EMAIL_JS_USER_ID}`,
+      )
+      .then(
+        (res) => console.log(res),
+        (err) => console.error(err),
+      );
     return;
   };
 
