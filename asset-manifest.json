@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.js": "/static/js/main.811e33d6.chunk.js",
-    "main.js.map": "/static/js/main.811e33d6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.19f3ec00.js",
-    "runtime-main.js.map": "/static/js/runtime-main.19f3ec00.js.map",
-    "static/js/2.e0f388f2.chunk.js": "/static/js/2.e0f388f2.chunk.js",
-    "static/js/2.e0f388f2.chunk.js.map": "/static/js/2.e0f388f2.chunk.js.map",
-    "static/js/3.bc16d2ba.chunk.js": "/static/js/3.bc16d2ba.chunk.js",
-    "static/js/3.bc16d2ba.chunk.js.map": "/static/js/3.bc16d2ba.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.e0f388f2.chunk.js.LICENSE.txt": "/static/js/2.e0f388f2.chunk.js.LICENSE.txt",
-    "static/media/MAKE4U-logo.290e7145.svg": "/static/media/MAKE4U-logo.290e7145.svg",
-    "static/media/comment.2ee5fd78.svg": "/static/media/comment.2ee5fd78.svg",
-    "static/media/comment.47dc05b1.png": "/static/media/comment.47dc05b1.png",
-    "static/media/instagram.a356a1ae.svg": "/static/media/instagram.a356a1ae.svg",
-    "static/media/intro.422d1022.jpg": "/static/media/intro.422d1022.jpg",
-    "static/media/naver.0cb84f1a.svg": "/static/media/naver.0cb84f1a.svg"
+    "main.js": "/makeforyou-org/static/js/main.811e33d6.chunk.js",
+    "main.js.map": "/makeforyou-org/static/js/main.811e33d6.chunk.js.map",
+    "runtime-main.js": "/makeforyou-org/static/js/runtime-main.2875733e.js",
+    "runtime-main.js.map": "/makeforyou-org/static/js/runtime-main.2875733e.js.map",
+    "static/js/2.fd14f417.chunk.js": "/makeforyou-org/static/js/2.fd14f417.chunk.js",
+    "static/js/2.fd14f417.chunk.js.map": "/makeforyou-org/static/js/2.fd14f417.chunk.js.map",
+    "static/js/3.bc16d2ba.chunk.js": "/makeforyou-org/static/js/3.bc16d2ba.chunk.js",
+    "static/js/3.bc16d2ba.chunk.js.map": "/makeforyou-org/static/js/3.bc16d2ba.chunk.js.map",
+    "index.html": "/makeforyou-org/index.html",
+    "static/js/2.fd14f417.chunk.js.LICENSE.txt": "/makeforyou-org/static/js/2.fd14f417.chunk.js.LICENSE.txt",
+    "static/media/MAKE4U-logo.290e7145.svg": "/makeforyou-org/static/media/MAKE4U-logo.290e7145.svg",
+    "static/media/comment.2ee5fd78.svg": "/makeforyou-org/static/media/comment.2ee5fd78.svg",
+    "static/media/comment.47dc05b1.png": "/makeforyou-org/static/media/comment.47dc05b1.png",
+    "static/media/instagram.a356a1ae.svg": "/makeforyou-org/static/media/instagram.a356a1ae.svg",
+    "static/media/intro.422d1022.jpg": "/makeforyou-org/static/media/intro.422d1022.jpg",
+    "static/media/naver.0cb84f1a.svg": "/makeforyou-org/static/media/naver.0cb84f1a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.19f3ec00.js",
-    "static/js/2.e0f388f2.chunk.js",
+    "static/js/runtime-main.2875733e.js",
+    "static/js/2.fd14f417.chunk.js",
     "static/js/main.811e33d6.chunk.js"
   ]
 }
