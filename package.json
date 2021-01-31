@@ -2,7 +2,7 @@
   "name": "makeforyou-org",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://cdbrouk.github.io/makeforyou-org",
+  "homepage": ".",
   "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -28,6 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy:gh-pages": "gh-pages -d build",
+    "deploy:s3": "aws s3 sync ./build s3://m4u-org --profile=m4u-org",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
