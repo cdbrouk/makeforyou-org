@@ -1,83 +1,79 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { AppLogo, InstagramLogo, NaverLogo } from '../../static/svg';
+import media from '../../lib/media';
+import { AppLogo } from '../../static/svg';
 
-interface HeaderBlockProps {
-  isScrollTop?: boolean;
-}
-
-const Block = styled.nav<HeaderBlockProps>`
+const Wrapper = styled.header`
   width: 100vw;
-  height: 80px;
-  padding: 0 20px;
+  height: 66px;
   position: fixed;
   z-index: 10001;
   top: 0;
   left: 0;
-  background-color: ${(props) => !props.isScrollTop && 'white'};
+  background-color: white;
 
-  transition: background-color 300ms ease-in-out;
+  ${media.mobile} {
+    height: 33px;
+  }
 `;
 
 const Inner = styled.div`
   display: flex;
+  position: relative;
   width: 100%;
   height: inherit;
   align-items: center;
-  max-width: 1280px;
-  justify-content: space-between;
-  margin: 0 auto;
+  justify-content: flex-start;
 `;
 
-const SNSBlock = styled.nav`
+const AppLogoWrapper = styled.div`
+  width: 16.9%;
+  padding: 0 2.7%;
+  height: inherit;
   display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const SNSIcoWrapper = styled.div`
-  margin: 0 5px;
+const RouterWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: inherit;
+  background-color: #0e1a56;
+
+  ${media.mobile} {
+    justify-content: center;
+  }
+`;
+
+const RouterChip = styled.span`
+  color: white;
+  margin: 0 4%;
+  font-size: 1.2rem;
+
+  ${media.mobile} {
+    font-size: 8px;
+    margin: 0 8px;
+  }
 `;
 
 const Header: React.FC = () => {
-  const [isSrollTop, setIsScrollTop] = useState(true);
-  useEffect(() => {
-    const listenScroll = () => {
-      if (window.pageYOffset > 58) setIsScrollTop(false);
-      else setIsScrollTop(true);
-    };
-    window.addEventListener('scroll', listenScroll);
-
-    return () => window.removeEventListener('scroll', listenScroll);
-  }, []);
-
   return (
-    <Block isScrollTop={isSrollTop}>
+    <Wrapper>
       <Inner>
-        <AppLogo />
-        <SNSBlock>
-          <SNSIcoWrapper>
-            <NaverLogo
-              width={29}
-              height={29}
-              onClick={() =>
-                window.open('https://blog.naver.com/makeforyou7', '_blank')
-              }
-            />
-          </SNSIcoWrapper>
-          <SNSIcoWrapper>
-            <InstagramLogo
-              width={29}
-              height={29}
-              onClick={() =>
-                window.open(
-                  'https://www.instagram.com/makeforyou.kr/',
-                  '_blank',
-                )
-              }
-            />
-          </SNSIcoWrapper>
-        </SNSBlock>
+        <AppLogoWrapper>
+          <AppLogo />
+        </AppLogoWrapper>
+        <RouterWrapper>
+          <RouterChip>홈페이지소개</RouterChip>
+          <RouterChip>사이트 공지</RouterChip>
+          <RouterChip>파트너스</RouterChip>
+          <RouterChip>블로그</RouterChip>
+        </RouterWrapper>
       </Inner>
-    </Block>
+    </Wrapper>
   );
 };
 
