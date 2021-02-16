@@ -29,6 +29,7 @@
     "build": "react-scripts build",
     "deploy:gh-pages": "gh-pages -d build",
     "deploy:s3": "aws s3 sync ./build s3://m4u-org --profile=m4u-org",
+    "cloudfront-refresh": "aws cloudfront create-invalidation --distribution-id=E2TH744ISB1ZLH --paths '/*'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

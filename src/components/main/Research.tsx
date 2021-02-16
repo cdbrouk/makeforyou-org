@@ -45,7 +45,12 @@ const ResearchImage = styled.img.attrs({
 
 const Research: React.FC = () => {
   return (
-    <Wrapper>
+    <Wrapper
+      onClick={() =>
+        (window.location.href =
+          'https://www.notion.so/MAKE-4-U-b578052cc8ca41579711bf54fd19e3be')
+      }
+    >
       <ResearchWrapper>
         <p>공장 입점 설문조사하고</p>
         <ResearchImage />
