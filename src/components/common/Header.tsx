@@ -68,9 +68,28 @@ const Header: React.FC = () => {
         </AppLogoWrapper>
         <RouterWrapper>
           <RouterChip>홈페이지소개</RouterChip>
-          <RouterChip>사이트 공지</RouterChip>
-          <RouterChip>파트너스</RouterChip>
-          <RouterChip>블로그</RouterChip>
+          <RouterChip
+            onClick={() =>
+              (window.location.href =
+                'https://www.notion.so/7e60e7ef79f24da9baf8c68d43e98e6d')
+            }
+          >
+            사이트 소개
+          </RouterChip>
+          <RouterChip
+            onClick={() =>
+              (window.location.href = 'https://blog.naver.com/wqmn1212')
+            }
+          >
+            파트너스
+          </RouterChip>
+          <RouterChip
+            onClick={() =>
+              (window.location.href = 'https://blog.naver.com/wqmn1212')
+            }
+          >
+            블로그
+          </RouterChip>
         </RouterWrapper>
       </Inner>
     </Wrapper>
