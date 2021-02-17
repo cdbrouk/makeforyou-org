@@ -1,23 +1,19 @@
 import React from 'react';
+import Footer from '../components/common/Footer';
 import PageTemplate from '../components/common/PageTemplate';
-import Banner from '../components/main/Banner';
-import FirstLayout from '../components/main/FirstLayout';
-import FuncBlueSection from '../components/main/FuncBlueSection';
-import InfoBlueSection from '../components/main/InfoBlueSection';
-import Intro from '../components/main/Intro';
-import Research from '../components/main/Research';
-import SecondLayout from '../components/main/SecondLayout';
+import FirstSection from '../components/main/FirstSection';
+import SecondSection from '../components/main/SecondSection';
+import ThirdSection from '../components/main/ThirdSection';
 
-const MainPage: React.FC = () => (
-  <PageTemplate>
-    <Intro />
-    <Banner />
-    <FirstLayout />
-    <FuncBlueSection />
-    <SecondLayout />
-    <Research />
-    <InfoBlueSection />
-  </PageTemplate>
-);
+const IndexPage: React.FC = () => {
+  return (
+    <PageTemplate>
+      <FirstSection />
+      <SecondSection />
+      <ThirdSection />
+      <Footer />
+    </PageTemplate>
+  );
+};
 
-export default MainPage;
+export default IndexPage;

@@ -3,7 +3,7 @@ export const mediaQuery = (maxWidth: number): string => `
 `;
 
 const media = {
-  mobile: mediaQuery(450),
+  mobile: mediaQuery(1024),
 };
 
 export default media;

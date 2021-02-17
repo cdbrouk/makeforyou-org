@@ -1,98 +1,58 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from '../../lib/media';
-import { AppLogo } from '../../static/svg';
+import {
+  HEADER_MAX_WIDTH,
+  MOBILE_HEADER,
+  PC_HEADER,
+} from '../../lib/style/constant';
+import media from '../../lib/style/media';
+import MenuIcon from '@material-ui/icons/Menu';
 
-const Wrapper = styled.header`
+const HeaderWrapper = styled.header`
   width: 100vw;
-  height: 66px;
+  height: ${PC_HEADER}px;
   position: fixed;
-  z-index: 10001;
-  top: 0;
-  left: 0;
   background-color: white;
 
   ${media.mobile} {
-    height: 33px;
+    height: ${MOBILE_HEADER}px;
   }
 `;
 
-const Inner = styled.div`
-  display: flex;
-  position: relative;
-  width: 100%;
+const InnerWrapper = styled.div`
+  max-width: ${HEADER_MAX_WIDTH}px;
   height: inherit;
-  align-items: center;
-  justify-content: flex-start;
-`;
-
-const AppLogoWrapper = styled.div`
-  width: 16.9%;
-  padding: 0 2.7%;
-  height: inherit;
+  padding: 0 24px;
   display: flex;
-  justify-content: center;
   align-items: center;
-`;
-
-const RouterWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: inherit;
-  background-color: #0e1a56;
 
   ${media.mobile} {
-    justify-content: center;
+    justify-content: space-between;
   }
 `;
 
-const RouterChip = styled.span`
-  color: white;
-  margin: 0 4%;
-  font-size: 1.2rem;
+const Logo = styled.div`
+  font-size: 24px;
+`;
 
+const Menu = styled.div`
+  display: none;
   ${media.mobile} {
-    font-size: 8px;
-    margin: 0 8px;
+    cursor: pointer;
+    display: block;
   }
 `;
 
 const Header: React.FC = () => {
   return (
-    <Wrapper>
-      <Inner>
-        <AppLogoWrapper>
-          <AppLogo />
-        </AppLogoWrapper>
-        <RouterWrapper>
-          <RouterChip>홈페이지소개</RouterChip>
-          <RouterChip
-            onClick={() =>
-              (window.location.href =
-                'https://www.notion.so/7e60e7ef79f24da9baf8c68d43e98e6d')
-            }
-          >
-            사이트 소개
-          </RouterChip>
-          <RouterChip
-            onClick={() =>
-              (window.location.href = 'https://blog.naver.com/wqmn1212')
-            }
-          >
-            파트너스
-          </RouterChip>
-          <RouterChip
-            onClick={() =>
-              (window.location.href = 'https://blog.naver.com/wqmn1212')
-            }
-          >
-            블로그
-          </RouterChip>
-        </RouterWrapper>
-      </Inner>
-    </Wrapper>
+    <HeaderWrapper>
+      <InnerWrapper>
+        <Logo>MAKE4U</Logo>
+        {/* <Menu>
+          <MenuIcon style={{ fontSize: 32 }} />
+        </Menu> */}
+      </InnerWrapper>
+    </HeaderWrapper>
   );
 };
 
