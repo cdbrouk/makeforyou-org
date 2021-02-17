@@ -25,6 +25,7 @@ const InnerWrapper = styled.div`
   padding: 0 24px;
   display: flex;
   align-items: center;
+  margin: 0 auto;
 
   ${media.mobile} {
     justify-content: space-between;
@@ -32,7 +33,11 @@ const InnerWrapper = styled.div`
 `;
 
 const Logo = styled.div`
-  font-size: 24px;
+  font-size: 48px;
+
+  ${media.mobile} {
+    font-size: 24px;
+  }
 `;
 
 const Menu = styled.div`
