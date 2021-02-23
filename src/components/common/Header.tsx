@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header`
   width: 100vw;
   height: ${PC_HEADER}px;
   position: fixed;
-  background-color: white;
+  background-color: rgb(98, 69, 239);
 
   ${media.mobile} {
     height: ${MOBILE_HEADER}px;
@@ -34,6 +34,7 @@ const InnerWrapper = styled.div`
 
 const Logo = styled.div`
   font-size: 48px;
+  color: white;
 
   ${media.mobile} {
     font-size: 24px;
