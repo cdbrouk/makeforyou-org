@@ -25,10 +25,11 @@ const InnerWrapper = styled.div`
   padding: 0 24px;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0 auto;
 
   ${media.mobile} {
-    justify-content: space-between;
+    justify-content: center;
   }
 `;
 
