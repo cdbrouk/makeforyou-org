@@ -6,6 +6,7 @@ import {
   PC_HEADER,
 } from '../../lib/style/constant';
 import media from '../../lib/style/media';
+import Jalnan from '../../fonts/Jalnan.ttf';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const HeaderWrapper = styled.header`
@@ -36,7 +37,7 @@ const InnerWrapper = styled.div`
 const Logo = styled.div`
   font-size: 48px;
   color: white;
-
+  font-family: 'Jalnan';
   ${media.mobile} {
     font-size: 24px;
   }
