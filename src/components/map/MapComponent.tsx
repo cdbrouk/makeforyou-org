@@ -47,12 +47,12 @@ const MapComponent: React.FC = () => {
 
         /** contruct map control */
         // const mapTypeControl = new window.kakao.maps.MapTypeControl();
-        const zoomControl = new window.kakao.maps.ZoomControl();
+        // const zoomControl = new window.kakao.maps.ZoomControl();
         // map.addControl(
         //   mapTypeControl,
         //   window.kakao.maps.ControlPosition.TOPRIGHT,
         // );
-        map.addControl(zoomControl, window.kakao.maps.ControlPosition.TOPRIGHT);
+        // map.addControl(zoomControl, window.kakao.maps.ControlPosition.TOPRIGHT);
 
         Factories.forEach((factory) => createMarker(factory, map));
       });
