@@ -1,47 +1,45 @@
 import React from 'react';
 import styled from 'styled-components';
-import { P1, SPAN } from '../../lib/style/typography';
+import { COLORS } from '../../lib/style/constant';
+import media from '../../lib/style/media';
 
 const Wrapper = styled.footer`
+  width: 100vw;
+  height: auto;
   background-color: black;
-  color: white;
 `;
 
 const Inner = styled.div`
-  padding: 64px 32px;
-`;
-
-const LabelWrapper = styled.div`
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-`;
+  align-items: flex-start;
+  color: ${COLORS.purple_text};
+  line-height: 150%;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 72px 0;
 
-const Label = styled(P1)`
-  margin-top: 34px;
-  font-weight: 500;
-`;
-
-const LabelItem = styled(SPAN)`
-  margin-bottom: 16px;
+  ${media.mobile} {
+    padding: 48px;
+  }
 `;
 
 const Footer: React.FC = () => {
   return (
     <Wrapper>
       <Inner>
-        <LabelWrapper>
-          <Label>CONTACTS</Label>
-          <LabelItem>TEL 010-6838-6571</LabelItem>
-          <LabelItem>FAX 0504-230-1751</LabelItem>
-          <LabelItem>EMAIL makeforyou7@gmail.com</LabelItem>
-        </LabelWrapper>
-        <LabelWrapper>
-          <Label>ADDRESS</Label>
-          <LabelItem>
-            경기도 고양시 일산동구 무궁화로 43-15 <br />
-            한길세이프빌 102호
-          </LabelItem>
-        </LabelWrapper>
+        TEL | 010-6838-6571
+        <br />
+        FAX | 0504-230-1751
+        <br />
+        EMAIL | makeforyou7@gmail.com
+        <br />
+        <br />
+        <br />
+        <br />
+        경기도 고양시 일산동구 성현로 155-13
       </Inner>
     </Wrapper>
   );
